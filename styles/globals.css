@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 60 9.1% 97.8%; /* stone-50 背景 */
+    --foreground: 20 14.3% 4.1%;
+    --primary: 180 33% 26%; /* 深綠色 #2D5A5A 近似 */
+    --primary-foreground: 60 9.1% 97.8%;
+  }
+
+  .dark {
+    --background: 20 14.3% 4.1%; /* 深邃石灰黑 */
+    --foreground: 60 9.1% 97.8%;
+    --primary: 180 33% 40%; /* 稍亮的深綠以保證對比度 */
+    --primary-foreground: 20 14.3% 4.1%;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
