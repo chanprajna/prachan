@@ -14,7 +14,6 @@ export default function LinkAccountPage() {
   const [mobile, setMobile] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.formEvent?.preventDefault?.(); // Prevent standard submit via react event
     e.preventDefault();
 
     if (!fourAsmId || !mobile) {
