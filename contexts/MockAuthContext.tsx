@@ -28,9 +28,6 @@ export function MockAuthProvider({ children }: { children: React.ReactNode }) {
     localStorage.setItem('mockRole', newRole)
   }
 
-  // 避免 server side render 時閃爍不一致
-  if (!isClient) return <>{children}</>
-
   return (
     <MockAuthContext.Provider value={{ role, setRole }}>
       {children}
